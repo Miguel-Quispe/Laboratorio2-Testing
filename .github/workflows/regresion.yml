@@ -1,0 +1,24 @@
+name: Suite de regresión
+
+on: [push]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar navegadores de Playwright
+        run: npx playwright install --with-deps
+
+      - name: Ejecutar pruebas de Playwright
+        run: npx playwright test
+
+      - name: Ejecutar pruebas de Jest
+        run: npx jest
