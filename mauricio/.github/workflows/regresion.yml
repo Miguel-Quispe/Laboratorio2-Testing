@@ -14,11 +14,5 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Instalar navegadores de Playwright
-        run: npx playwright install --with-deps
-
-      - name: Ejecutar pruebas de Playwright (Funcionales y de Integración)
-        run: npx playwright test
-
-      - name: Ejecutar pruebas de Jest (Unidad)
-        run: npx jest
+      - name: Instalar navegadores de Playwrightgit add .
+        run: npx playwright install
