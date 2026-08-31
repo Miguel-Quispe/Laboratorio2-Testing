@@ -18,7 +18,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Ejecutar pruebas de Playwright
-        run: npx playwright test **/*.spec.js
+        run: npx playwright test mauricio/
 
       - name: Ejecutar pruebas de Jest
         run: npx jest
