@@ -22,4 +22,3 @@ jobs:
 
       - name: Ejecutar pruebas de Jest
         run: npx jest
-      
